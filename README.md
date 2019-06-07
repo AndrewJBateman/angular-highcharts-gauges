@@ -25,13 +25,13 @@ Angular app using the [Highcharts](https://www.highcharts.com/) API to visualise
 
 ## Technologies
 
-* [Angular CLI v7.3.9](https://github.com/angular/angular-cli)
+* [Angular CLI v8.0.1](https://github.com/angular/angular-cli)
 
-* [Angular framework v7.2.15](https://angular.io/)
+* [Angular framework v8.0.0](https://angular.io/)
 
-* [highcharts v4.2.5](https://www.highcharts.com/)
+* [highcharts v7.1.2](https://www.highcharts.com/)
 
-* [angular-highcharts v 6.2.6](https://www.npmjs.com/package/angular-highcharts) - currently at v7.2.0 in npm but older version used with @types/highcharts.
+* [angular-highcharts v 8.0.2](https://www.npmjs.com/package/angular-highcharts)
 
 ## Setup
 
