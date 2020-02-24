@@ -5,10 +5,9 @@ import {
 	AfterViewInit,
 	OnInit
 } from '@angular/core';
-import { chart, SolidGaugeChart } from 'highcharts';
+import { chart } from 'highcharts';
 
 import * as Highcharts from 'highcharts';
-import * as solidGauge from 'highcharts/modules/solid-gauge.src';
 
 @Component({
 	selector: 'app-root',
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	title = 'app';
 
 	// Viewchild is a property decorator that configures a view query.
-	@ViewChild('chartTarget')
+	@ViewChild('chartTarget', {static: false})
 	chartTarget: ElementRef;
 	options: any;
 	chart: Highcharts.ChartObject;
