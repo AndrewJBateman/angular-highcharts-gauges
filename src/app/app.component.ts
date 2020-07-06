@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	@ViewChild('chartTarget', {static: false})
 	chartTarget: ElementRef;
 	options: any;
-	chart: Highcharts.ChartObject;
+	chart: any
 
 	ngOnInit() {}
 

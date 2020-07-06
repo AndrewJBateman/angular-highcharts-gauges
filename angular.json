@@ -13,8 +13,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "highcharts/highcharts-more.src",
+              "highcharts/highcharts-more",
+              "highcharts",
+              "highcharts/modules/solid-gauge.src",
+              "highcharts/highmaps",
+              "highcharts/highstock"
+           ],
             "aot": true,
-            "outputPath": "dist/angular-highlights-gauges",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -26,8 +34,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
