@@ -29,7 +29,7 @@ Angular app using the [Highcharts](https://www.highcharts.com/) API to visualise
 * [highcharts v7.1.2](https://www.highcharts.com/)
 * [angular-highcharts v6.2.6](https://www.npmjs.com/package/angular-highcharts)
 
-##  :floppy_disk: Setup
+## :floppy_disk: Setup
 
 Run `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
