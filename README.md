@@ -20,7 +20,7 @@
 ## :books: General info
 
 * Latest versions of all dependencies used, including highcharts. With some type changes in app-module there are now no errors.
-* This simple app works but it is the optimal coding solution and does not use the latest Highcharts Angular wrapper.
+* This simple app works but it is not the optimal coding solution as it does not use the latest Highcharts Angular wrapper.
 
 ## :camera: Screenshots
 
@@ -29,7 +29,7 @@
 ## :signal_strength: Technologies
 
 * [Angular framework v11](https://angular.io/)
-* [highcharts v8](https://www.highcharts.com/)
+* [Highcharts v8](https://www.highcharts.com/)
 
 ## :floppy_disk: Setup
 
@@ -51,7 +51,7 @@ plotBands: [
 
 ## :cool: Features
 
-* Highcharts gauges have other types of gauges and lots of options that can be configured.
+* [Highcharts gauges](https://www.highcharts.com/) have other types of gauges and lots of options that can be configured.
 
 ## :clipboard: Status & To-Do List
 
