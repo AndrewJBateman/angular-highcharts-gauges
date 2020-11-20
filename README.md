@@ -1,6 +1,8 @@
 # :zap: Angular Highcharts Gauges
 
-Angular 10 app using the [Highcharts](https://www.highcharts.com/) API to visualise data.
+* Angular 11 app using the [Highcharts](https://www.highcharts.com/) API to visualise data.
+* Displays a gauge, configurable from the `app.component.ts` file using values from [Highcharts documentation](https://api.highcharts.com/highcharts/chart#).
+* Code from [Sunny Sun, Medium](https://medium.com/@sunnysun_5694) - see [:clap: Inspiration](#clap-inspiration) below
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -18,6 +20,7 @@ Angular 10 app using the [Highcharts](https://www.highcharts.com/) API to visual
 ## :books: General info
 
 * Latest versions of all dependencies used, including highcharts. With some type changes in app-module there are now no errors.
+* This simple app works but it is the optimal coding solution and does not use the latest Highcharts Angular wrapper.
 
 ## :camera: Screenshots
 
@@ -25,18 +28,18 @@ Angular 10 app using the [Highcharts](https://www.highcharts.com/) API to visual
 
 ## :signal_strength: Technologies
 
-* [Angular framework v10](https://angular.io/)
+* [Angular framework v11](https://angular.io/)
 * [highcharts v8](https://www.highcharts.com/)
-* [angular-highcharts v9](https://www.npmjs.com/package/angular-highcharts)
 
 ## :floppy_disk: Setup
 
-* Run `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `npm i` to install dependencies
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * Run 'ng build' to create a build file
 
 ## :computer: Code Examples
 
-* app.component.ts - defines the plotband values and colours.
+* extract from `app.component.ts` - defines the plotband values and colours.
 
 ```typescript
 plotBands: [
@@ -52,8 +55,8 @@ plotBands: [
 
 ## :clipboard: Status & To-Do List
 
-* Status: basic working app that displays a gauge, configurable from the `app.component.ts` file using values from [Highcharts documentation](https://api.highcharts.com/highcharts/chart#). Updated to Angular 10 and working correctly.
-* To-Do: nothing
+* Status: Working
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
