@@ -1,13 +1,10 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-  OnInit,
-} from "@angular/core";
-import { chart } from "highcharts";
-
+import { Component, AfterViewInit, OnInit } from "@angular/core";
 import * as Highcharts from "highcharts";
+import HighchartsMore from "highcharts/highcharts-more";
+import HighchartsSolidGauge from "highcharts/modules/solid-gauge";
+
+HighchartsMore(Highcharts);
+HighchartsSolidGauge(Highcharts);
 
 @Component({
   selector: "app-root",
@@ -17,79 +14,79 @@ import * as Highcharts from "highcharts";
 export class AppComponent implements OnInit, AfterViewInit {
   title = "app";
 
-  // Viewchild is a property decorator that configures a view query.
-  @ViewChild("chartTarget", { static: false })
-  chartTarget: ElementRef;
-  options: any;
-  chart: any;
-
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.initOptions();
-    this.chart = chart(this.chartTarget.nativeElement, this.options as any);
+    this.createSolidGauge1();
   }
 
-  initOptions() {
-    this.options = {
+  private createSolidGauge1(): void {
+    const chart = Highcharts.chart("solid-gauge", {
       chart: {
         type: "solidgauge",
       },
       title: {
-        text: "Highcharts Solid Gauge",
+        text: "Random Number Solid Gauge",
+      },
+      credits: {
+        enabled: true,
       },
       pane: {
         startAngle: -90,
         endAngle: 90,
+        center: ["50%", "85%"],
+        size: "160%",
         background: {
-          backgroundColor: "lightgrey",
           innerRadius: "60%",
-          outerRadius: "85%",
+          outerRadius: "100%",
           shape: "arc",
         },
       },
-      tooltip: {
-        enabled: false,
-      },
-      // the value axis
       yAxis: {
+        min: 0,
+        max: 600,
         stops: [
-          [0.5, "green"],
-          [0.6, "orange"],
-          [0.9, "#DF5353"],
+          [0.3, "green"],
+          [0.5, "yellow"],
+          [0.7, "orange"],
+          [0.9, "red"],
         ],
-        length: 5,
-        lineWidth: 0,
         minorTickInterval: null,
         tickAmount: 2,
-        title: {
-          y: -70,
-        },
         labels: {
           y: 16,
         },
-        min: 0,
-        max: 400,
-        plotBands: [
-          { from: 0, to: 200, color: "green" },
-          { from: 200, to: 340, color: "orange" },
-          { from: 340, to: 400, color: "red" },
-        ],
       },
       plotOptions: {
         solidgauge: {
           dataLabels: {
-            y: 5,
+            y: -25,
             borderWidth: 0,
             useHTML: true,
           },
         },
       },
+      tooltip: {
+        enabled: false,
+      },
       series: [
         {
-          data: [120],
+          name: null,
+          data: [this.getRandomNumber(0, 600)],
+          dataLabels: {
+            format:
+              '<div style="text-align: center"><span style="font-size: 3rem">{y}</span></div>',
+          },
         },
       ],
-    };
+    } as any);
+
+    setInterval(() => {
+      chart.series[0].points[0].update(this.getRandomNumber(0, 600));
+    }, 1000);
+  }
+
+  private getRandomNumber(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 }
