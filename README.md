@@ -1,8 +1,7 @@
 # :zap: Angular Highcharts Gauges
 
-* Angular 12 app using the [Highcharts](https://www.highcharts.com/) API to visualise data.
+* Angular app using the [Highcharts](https://www.highcharts.com/) API to visualise data.
 * Displays a gauge, configurable from the `app.component.ts` file using values from [Highcharts documentation](https://api.highcharts.com/highcharts/chart#).
-* Code from [Sunny Sun, Medium](https://medium.com/@sunnysun_5694) - see [:clap: Inspiration](#clap-inspiration) below
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-highcharts-gauges?style=plastic)
@@ -12,19 +11,23 @@
 
 ## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Angular Highcharts Gauges](#zap-angular-highcharts-gauges)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General Info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer_code-examples)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
-* Latest versions of all dependencies used, including highcharts. With some type changes in app-module there are now no errors.
-* This simple app works but it is not the optimal coding solution as it does not use the latest Highcharts Angular wrapper.
+* Latest versions of all dependencies used, including highcharts. No errors
+* Uses the Highcharts solid gauge module
+* Random number function used to create data for gauge
 
 ## :camera: Screenshots
 
@@ -32,7 +35,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v12](https://angular.io/)
+* [Angular framework v13](https://angular.io/)
 * [Highcharts v9](https://www.highcharts.com/)
 
 ## :floppy_disk: Setup
@@ -43,14 +46,74 @@
 
 ## :computer: Code Examples
 
-* extract from `app.component.ts` - defines the plotband values and colours.
+* extract from `app.component.ts` - function to create a solid gauge
 
 ```typescript
-plotBands: [
-  { from: 0, to: 200, color: 'green' },
-  { from: 200, to: 340, color: 'orange' },
-  { from: 340, to: 400, color: 'red' }
-]
+  private createSolidGauge1(): void {
+    const chart = Highcharts.chart("solid-gauge", {
+      chart: {
+        type: "solidgauge",
+      },
+      title: {
+        text: "Random Number Solid Gauge",
+      },
+      credits: {
+        enabled: true,
+      },
+      pane: {
+        startAngle: -90,
+        endAngle: 90,
+        center: ["50%", "85%"],
+        size: "160%",
+        background: {
+          innerRadius: "60%",
+          outerRadius: "100%",
+          shape: "arc",
+        },
+      },
+      yAxis: {
+        min: 0,
+        max: 600,
+        stops: [
+          [0.3, "green"],
+          [0.5, "yellow"],
+          [0.7, "orange"],
+          [0.9, "red"],
+        ],
+        minorTickInterval: null,
+        tickAmount: 2,
+        labels: {
+          y: 16,
+        },
+      },
+      plotOptions: {
+        solidgauge: {
+          dataLabels: {
+            y: -25,
+            borderWidth: 0,
+            useHTML: true,
+          },
+        },
+      },
+      tooltip: {
+        enabled: false,
+      },
+      series: [
+        {
+          name: null,
+          data: [this.getRandomNumber(0, 600)],
+          dataLabels: {
+            format:
+              '<div style="text-align: center"><span style="font-size: 3rem">{y}</span></div>',
+          },
+        },
+      ],
+    } as any);
+
+    setInterval(() => {
+      chart.series[0].points[0].update(this.getRandomNumber(0, 600));
+    }, 1000);
+  }
 ```
 
 ## :cool: Features
@@ -59,12 +122,12 @@ plotBands: [
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Updated may 2021.
+* Status: Working.
 * To-Do: Nothing
 
 ## :clap: Inspiration
 
-* [Medium blog by Sunny Sun: How to create impressive looking Gauge Charts using Angular 6, dec 24, 2018](https://medium.com/@sunnysun_5694/how-to-create-impressive-looking-gauge-charts-using-angular-6-8f91dfd6fc5c)
+* [Highcharts Solid Gauge Documentation](https://api.highcharts.com/highcharts/plotOptions.solidgauge?_ga=2.254467530.33117973.1645276249-1074080791.1645276249)
 
 ## :file_folder: License
 
