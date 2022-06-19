@@ -13,11 +13,12 @@
 
 * [:zap: Angular Highcharts Gauges](#zap-angular-highcharts-gauges)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
-  * [:books: General Info](#books-general-info)
+  * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signal_strength-technologies)
   * [:floppy_disk: Setup](#floppy_disk-setup)
-  * [:computer: Code Examples](#computer_code-examples)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
   * [:file_folder: License](#file_folder-license)
@@ -35,14 +36,14 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v13](https://angular.io/)
-* [Highcharts v9](https://www.highcharts.com/)
+* [Angular framework v14](https://angular.io/)
+* [Highcharts v10](https://www.highcharts.com/)
 
 ## :floppy_disk: Setup
 
-* Run `npm i` to install dependencies
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-* Run 'ng build' to create a build file
+* `npm i` to install dependencies
+* `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* `ng build` to create a build file
 
 ## :computer: Code Examples
 
