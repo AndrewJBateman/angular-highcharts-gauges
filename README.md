@@ -12,16 +12,16 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular Highcharts Gauges](#zap-angular-highcharts-gauges)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -36,8 +36,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v14](https://angular.io/)
-* [Highcharts v10](https://www.highcharts.com/)
+* [Angular framework v16](https://angular.io/)
+* [Highcharts v11](https://www.highcharts.com/)
 
 ## :floppy_disk: Setup
 
@@ -123,7 +123,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
+* Status: Working
 * To-Do: Nothing
 
 ## :clap: Inspiration
@@ -136,4 +136,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
